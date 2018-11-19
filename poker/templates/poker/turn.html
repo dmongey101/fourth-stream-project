@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <h1>Turn</h1>
+    
+    {% for hand in players_hand %}
+    <p>Player:</p>
+    {% for card in hand %}
+    {{ card }}
+    {% endfor %}
+    {% endfor %}
+    
+    <hr>
+    <p>Turn</p>
+    {% for cards in community_cards %}
+    {% for card in cards %}
+    
+    {{ card }}
+    
+    {% endfor %}
+    {% endfor %}
+    
+    <hr>
+    <a href="{% url 'river' %}" class="white_text">Show River</a>
+    
+{% endblock %}

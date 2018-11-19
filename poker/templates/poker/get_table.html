@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <h2>Table Name: </h2>
+    <p>{{ table.name }}</p>
+    
+    <a href="{% url 'pre_flop' %}" class="white_text">Show pre-flop</a>
+   
+{% endblock %}
